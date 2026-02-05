@@ -5,7 +5,7 @@ Plugin URI: https://github.com/yourusername/talk-business
 Description: Premium animated contact modal with branded UI. AJAX email submission. Developed by Abdul Sattar.
 Version: 1.0
 Author: Abdul Sattar
-Author URI: https://github.com/yourusername
+Author URI: https://www.linkedin.com/in/abdulsattar752/
 License: GPL2
 */
 
