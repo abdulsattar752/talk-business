@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Talk Business – Get In Touch Modal
+Plugin Name: Talk Business
 Plugin URI: https://github.com/yourusername/talk-business
 Description: Premium animated contact modal with branded UI. AJAX email submission. Developed by Abdul Sattar.
 Version: 1.0
