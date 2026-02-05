@@ -1,7 +1,7 @@
 :root{
-  --tb-red:#e62e2e;
-  --tb-black:#121212;
-  --tb-light:#ededed;
+  --red:#e62e2e;
+  --dark:#121212;
+  --light:#f2f2f2;
 }
 
 /* Floating Button */
@@ -10,72 +10,58 @@
   left:0;
   top:50%;
   transform:translateY(-50%);
-  background:var(--tb-red);
+  background:var(--red);
   color:#fff;
   padding:14px 10px;
-  font-weight:600;
   writing-mode:vertical-rl;
+  font-weight:600;
   border-radius:0 12px 12px 0;
   cursor:pointer;
-  z-index:9999;
   display:none;
-  transition:background .3s;
+  z-index:9999;
 }
-#tb-float-btn:hover{background:#c91f1f}
 
 /* Overlay */
 #tb-overlay{
   position:fixed;
   inset:0;
-  background:rgba(18,18,18,.7);
+  background:rgba(0,0,0,.7);
   display:none;
-  align-items:flex-start;
   justify-content:center;
-  padding-top:50px;
+  align-items:flex-start;
+  padding-top:40px;
   z-index:10000;
   overflow-y:auto;
 }
 
 /* Modal */
 #tb-modal{
-  background:var(--tb-light);
+  background:var(--light);
   width:420px;
   max-width:90%;
-  padding:30px 25px;
+  padding:30px;
   border-radius:12px;
-  position:relative;
-  transform:translateY(-50px);
-  opacity:0;
-  animation:tbSlideDown .5s ease forwards;
-  max-height:90vh;
-  overflow-y:auto;
-  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+  animation:slideDown .4s ease forwards;
 }
 
 /* Close */
 #tb-close{
-  position:absolute;
-  top:15px;
-  right:15px;
+  float:right;
+  font-size:22px;
   background:none;
   border:none;
-  font-size:22px;
   cursor:pointer;
-  color:var(--tb-black);
 }
 
 /* Title */
 #tb-modal h2{
   text-align:center;
-  color:var(--tb-red);
-  margin-bottom:20px;
-  font-size:1.6rem;
+  color:var(--red);
 }
 
 /* Form */
 #tb-form label{
   font-size:14px;
-  color:var(--tb-black);
   font-weight:500;
 }
 
@@ -84,58 +70,37 @@
 #tb-form textarea{
   width:100%;
   padding:12px;
-  margin:6px 0 16px;
-  border-radius:12px;
+  margin:6px 0 14px;
+  border-radius:10px;
   border:1px solid #ccc;
-  font-family:inherit;
-  font-size:14px;
-  box-sizing:border-box;
 }
 
-#tb-form input:focus,
-#tb-form textarea:focus,
-#tb-form select:focus{
-  border-color:var(--tb-red);
-  outline:none;
-}
-
-/* Button */
 .tb-submit{
   width:100%;
+  background:var(--red);
+  color:#fff;
   padding:14px;
   border:none;
-  border-radius:12px;
-  background:var(--tb-red);
-  color:#fff;
+  border-radius:10px;
   font-weight:600;
   cursor:pointer;
-  transition:transform .2s, background .3s;
-}
-.tb-submit:hover{
-  background:#c91f1f;
-  transform:translateY(-2px);
 }
 
 .tb-success{
   display:none;
   text-align:center;
-  margin-top:15px;
-  color:var(--tb-red);
+  margin-top:10px;
+  color:var(--red);
   font-weight:600;
 }
 
-/* Animations */
-@keyframes tbSlideDown{
-  to{transform:translateY(0); opacity:1;}
+/* Animation */
+@keyframes slideDown{
+  from{transform:translateY(-30px);opacity:0}
+  to{transform:translateY(0);opacity:1}
 }
 
-/* Responsive */
+/* Mobile */
 @media(max-width:480px){
-  #tb-modal{
-    width:90%;
-    padding:20px 15px;
-    max-height:85vh;
-  }
-  #tb-modal h2{font-size:1.4rem;}
-  #tb-float-btn{padding:12px 8px;}
+  #tb-modal{padding:20px;}
 }
