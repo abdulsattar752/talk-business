@@ -76,6 +76,6 @@ function tb_mail()
 
   $message = "Name: $name\nEmail: $email\nPhone: $phone\nRegion: $region\n\nMessage:\n$project";
 
-  wp_mail("info@ideategrowth.com", "New Get In Touch Lead", $message);
+  wp_mail("info.abdulsattardeveloper@gmail.com", "New Get In Touch Lead", $message);
   wp_die();
 }
